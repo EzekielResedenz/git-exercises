@@ -16,6 +16,8 @@ class Master extends AbstractVerification
         $this->ensure(
             trim(implode('', $fileContent)) == self::$expectedContent,
             'The file that has been commited does not look like the generated one.'
+            git verify_file_md5( $filename:string, $expected_md5:string )
+            
         );
     }
 }
